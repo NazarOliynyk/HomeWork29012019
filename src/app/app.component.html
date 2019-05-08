@@ -1,0 +1,26 @@
+
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <hr>
+  <h3 *ngIf="message">{{message}}</h3>
+  <hr>
+  <form *ngIf="flag1">
+  <app-hero [hero]="heroes[0]"></app-hero>
+  <hr>
+  <app-hero [hero]="heroes[1]"></app-hero>
+  <hr>
+  </form>
+  <form *ngIf="flag2">
+    <app-hero [hero]="heroes[0] | modify"></app-hero>
+    <hr>
+    <app-hero [hero]="heroes[1] | modify"></app-hero>
+    <hr>
+  </form>
+  <button *ngIf="flag1" (click)="start()">Start Fight!</button>
+  <hr>
+  <button (click)="initNewGame()">Set random values of FIGHTERS</button>
+  <hr>
+  <button (click)="defaultData()">Default Values of FIGHTERS</button>
+  <hr>
+

@@ -1,0 +1,10 @@
+
+<h3>{{hero.name}}</h3>
+<p>HEALTH:
+  <strong>{{hero.health}}</strong>
+</p>
+<div class="health" [ngStyle]="{width: (6*hero.health)+'px'}"></div>
+<p>POWER:
+  <strong>{{hero.power}}</strong>
+</p>
+<div class="power" [ngStyle]="{width: (12*hero.power)+'px'}"></div>
